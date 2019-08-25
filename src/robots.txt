@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /assets
+Disallow: /404
+Sitemap: https://felipefm32.com/sitemap.xml

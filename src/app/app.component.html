@@ -1,0 +1,44 @@
+
+ 
+<mat-sidenav-container class="container" autosize  >
+  <mat-sidenav   mode="over"  class="sidenav"  #sidenav  [mode]="(screenWidth > 600) ? 'side' : 'over'"  >
+	<mat-toolbar color="warn" >
+		Menu
+		<span class="fill-remaining-space"></span>
+		<button mat-icon-button	(click)="sidenav.toggle()"	><mat-icon>close</mat-icon></button>
+	</mat-toolbar>
+	<div class="me">
+		<img width="150"  src="/assets/images/avatar.png" />
+		<h2>Felipe Mateus</h2>
+	</div>
+	
+	<mat-list>
+		<mat-list-item> <a class="button-row"  mat-button href="https://microblog.felipefm32.com">Microblog</a></mat-list-item>
+		<mat-list-item> <a class="button-row"  mat-button href="https://blog.felipefm32.com">Blog</a></mat-list-item>
+	</mat-list>
+  
+ 
+	<div class="copyright">
+		<p>2014 - 2019 @felipefm32</p>
+		<p><img width="150" src="assets/images/logo.png" /></p>
+		<p><a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png" /></a></p>
+	</div>
+  </mat-sidenav>
+  
+	
+  <mat-sidenav-content>
+	<mat-toolbar color="primary">
+		<button mat-icon-button aria-hidden="true" (click)="sidenav.toggle()" >
+		  <mat-icon>more_vert</mat-icon>
+		</button> 
+		<span class="title_name">Felipe Mateus</span>
+		<span class="fill-remaining-space"></span>
+		<a mat-button  routerLink="/">Home</a>
+		<a mat-button  href="https://blog.felipefm32.com">Blog</a>	
+		<a mat-button routerLink="/contato">Contato</a>
+	</mat-toolbar>
+  
+    <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

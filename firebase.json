@@ -1,0 +1,19 @@
+{
+  "functions": {
+    "predeploy": [
+     
+    ]
+  },
+  "hosting": {
+    "public": "www",
+	"rewrites": [
+      {"source": "/sendContact", "function": "sendContact" },
+      {"source": "**","destination": "/index.html"}
+   ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$my-app-primary: mat-palette($mat-blue);
+$my-app-secondary:  mat-palette($mat-light-blue);
+$my-app-warn:    mat-palette($mat-deep-orange);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-secondary,$my-app-warn);
+
+@include angular-material-theme($my-app-theme);
+
+
+a{color:#000;}
+
+.mat-toolbar.mat-primary{color:#171717;}
+
+//*Curriculo*/
+mat-list  .mat-list-item  p[matLine] span.full-green {background:#00E676;}
+mat-list  .mat-list-item  p[matLine] span.full-yellow {background:#FBC02D;}
+mat-list  .mat-list-item  p[matLine] span.full-amber {background:#FFA000;}
+mat-list  .mat-list-item  p[matLine] span {	background:#bbb;}
